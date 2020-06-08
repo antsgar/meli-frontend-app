@@ -21,7 +21,7 @@ https://antsgar-meli-frontend-app.herokuapp.com/
 git clone
 
 # Ir a carpeta del proyecto
-cd meli-frontend-test
+cd meli-frontend-app
 
 # Instalar dependencias
 npm install
