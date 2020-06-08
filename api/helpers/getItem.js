@@ -2,6 +2,12 @@ const getPriceDecimals = (price) => {
     return parseInt(price.toString().split(".")[1]);
 };
 
+const getPicture = (thumbnail, pictures) => {
+    // Get picture if available, if not thumbnail. Parse url to get picture of higher quality and through https
+    const picture = pictures ? pictures[0].url : thumbnail;
+    return picture.replace("-I", "-O").replace("http", "https")
+}
+
 const getItem = ({
     id,
     title,
@@ -20,8 +26,7 @@ const getItem = ({
             amount: price,
             decimals: getPriceDecimals(price),
         },
-        // Get picture if available, if not parse thumbnail url to get higher quality picture
-        picture: pictures ? pictures[0].url : thumbnail.replace("-I", "-O"),
+        picture: getPicture(thumbnail, pictures),
         condition,
         free_shipping: shipping.free_shipping,
     };
