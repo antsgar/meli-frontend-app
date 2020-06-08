@@ -48,7 +48,7 @@ exports[`Result should render component 1`] = `
               <img
                 alt="Free shipping icon"
                 className="freeShippingIcon"
-                src="./ic_shipping@2x.png.png"
+                src="/ic_shipping@2x.png.png"
               />
             </div>
             <div

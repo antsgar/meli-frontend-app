@@ -16,7 +16,7 @@ exports[`SearchBar should render component 1`] = `
         alt="Logo"
         className="logo"
         data-test="logo"
-        src="http://localhost:3000/Logo_ML@2x.png.png"
+        src="/Logo_ML@2x.png.png"
       />
     </a>
     <form
@@ -39,7 +39,7 @@ exports[`SearchBar should render component 1`] = `
         <img
           alt="Logo"
           className="searchIcon"
-          src="http://localhost:3000/ic_Search@2x.png.png"
+          src="/ic_Search@2x.png.png"
         />
       </a>
     </form>
