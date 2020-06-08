@@ -10,25 +10,25 @@ itemRoutes.get("/", async (req, res) => {
     try {
         const response = await axios.get(`${MLA_URL}/search?q=${req.query.q}`);
         const { data } = response;
+        const { results, filters } = data;
 
-        if (response.status === 200) {
-            const { results, filters } = data;
-
-            res.status(200).json({
-                author: {
-                    name: AUTHOR_FIRST_NAME,
-                    lastname: AUTHOR_LAST_NAME,
-                },
-                items: getItems(results.slice(0, ITEM_LIMIT)),
-                categories: getCategoriesFromFilters(filters),
+        res.status(200).json({
+            author: {
+                name: AUTHOR_FIRST_NAME,
+                lastname: AUTHOR_LAST_NAME,
+            },
+            items: getItems(results.slice(0, ITEM_LIMIT)),
+            categories: getCategoriesFromFilters(filters),
+        });
+        return;
+    } catch (e) {
+        if (e.response) {
+            res.status(e.response.status).json({
+                error: e.response.data.message,
             });
             return;
         }
 
-        res.status(response.status).json({
-            error: data.message,
-        });
-    } catch (e) {
         res.status(500).json({
             error: e.message,
         });
@@ -43,44 +43,38 @@ itemRoutes.get("/:id", async (req, res) => {
         let categories = [];
         let description = "";
 
-        if (itemResponse.status === 200) {
-            const itemDescriptionResponse = await axios.get(`${ML_URL}/items/${id}/description`);
-            const { data: itemDescriptionData } = itemDescriptionResponse;
+        const itemDescriptionResponse = await axios.get(`${ML_URL}/items/${id}/description`);
+        const { data: itemDescriptionData } = itemDescriptionResponse;
+        description = itemDescriptionData.plain_text;
 
-            if (itemDescriptionResponse.status === 200) {
-                description = itemDescriptionData.plain_text;
-            }
+        const item = {
+            ...getItem(itemData),
+            quantity: itemData.sold_quantity,
+            description,
+        };
 
-            const item = {
-                ...getItem(itemData),
-                quantity: itemData.sold_quantity,
-                description,
-            };
+        // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados,
+        // y deben estar disponibles en caso de acceder a la página navegando directamente a la URL
+        const categoryResponse = await axios.get(`${ML_URL}/categories/${itemData.category_id}`);
+        const { data: categoryData } = categoryResponse;
+        categories = getCategories(categoryData);
 
-            // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados,
-            // y deben estar disponibles en caso de acceder a la página navegando directamente a la URL
-            const categoryResponse = await axios.get(`${ML_URL}/categories/${itemData.category_id}`);
-            const { data: categoryData } = categoryResponse;
-
-            if (categoryResponse.status === 200) {
-                categories = getCategories(categoryData);
-            }
-
-            res.status(200).json({
-                author: {
-                    name: AUTHOR_FIRST_NAME,
-                    lastname: AUTHOR_LAST_NAME,
-                },
-                item,
-                categories,
+        res.status(200).json({
+            author: {
+                name: AUTHOR_FIRST_NAME,
+                lastname: AUTHOR_LAST_NAME,
+            },
+            item,
+            categories,
+        });
+    } catch (e) {
+        if (e.response) {
+            res.status(e.response.status).json({
+                error: e.response.data.message,
             });
             return;
         }
 
-        res.status(itemResponse.status).json({
-            error: itemData.message,
-        });
-    } catch (e) {
         res.status(500).json({
             error: e.message,
         });

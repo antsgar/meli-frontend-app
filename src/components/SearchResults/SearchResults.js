@@ -1,7 +1,7 @@
 import { Breadcrumb, ResultsCard, SpinnerSupport, ErrorMessage } from "..";
 import styles from "./SearchResults.module.scss";
 
-const SearchResults = ({ error, errorMessage, categories, items }) => {
+const SearchResults = ({ categories, items, error, errorMessage }) => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>

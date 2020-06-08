@@ -2,7 +2,7 @@ import axios from "axios";
 import { Layout, SearchBar, SearchResults } from "../../components";
 import { BASE_URL } from "../../constants";
 
-const Items = ({ error, errorMessage, search, categories, items }) => {
+const Items = ({ search, categories, items, error, errorMessage }) => {
     return (
         <Layout description={`Mercado Libre Argentina - Resultados de búsqueda para ${search}`}>
             <SearchBar search={search} />
@@ -13,10 +13,10 @@ const Items = ({ error, errorMessage, search, categories, items }) => {
 
 export async function getServerSideProps(context) {
     const { search } = context.query;
-    const response = await axios.get(`${BASE_URL}/api/items?q=${search}`);
-    const { data } = response;
 
-    if (response.status === 200) {
+    try {
+        const response = await axios.get(`${BASE_URL}/api/items?q=${search}`);
+        const { data } = response;
         const { items, categories } = data;
 
         if (items.length > 0) {
@@ -37,16 +37,16 @@ export async function getServerSideProps(context) {
                 search,
             },
         };
+    } catch (e) {
+        return {
+            props: {
+                error: true,
+                errorMessage:
+                    "Ha ocurrido un error al realizar la búsqueda. Por favor, inténtelo nuevamente en unos minutos.",
+                search,
+            },
+        };
     }
-
-    return {
-        props: {
-            error: true,
-            errorMessage:
-                "Ha ocurrido un error al realizar la búsqueda. Por favor, inténtelo nuevamente en unos minutos.",
-            search,
-        },
-    };
 }
 
 export default Items;
