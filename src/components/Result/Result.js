@@ -39,7 +39,7 @@ const Result = ({ result }) => {
                                 {freeShipping && (
                                     <img
                                         className={styles.freeShippingIcon}
-                                        src="./ic_shipping@2x.png.png"
+                                        src="/ic_shipping@2x.png.png"
                                         alt="Free shipping icon"
                                     ></img>
                                 )}

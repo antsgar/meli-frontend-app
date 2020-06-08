@@ -22,7 +22,7 @@ const SearchBar = ({ search }) => {
                 <img
                     className={styles.logo}
                     data-test="logo"
-                    src={`${BASE_URL}/Logo_ML@2x.png.png`}
+                    src={"/Logo_ML@2x.png.png"}
                     alt="Logo"
                 ></img>
             </a>
@@ -42,7 +42,7 @@ const SearchBar = ({ search }) => {
                 >
                     <img
                         className={styles.searchIcon}
-                        src={`${BASE_URL}/ic_Search@2x.png.png`}
+                        src={"/ic_Search@2x.png.png"}
                         alt="Logo"
                     ></img>
                 </a>
