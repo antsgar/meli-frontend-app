@@ -1,0 +1,119 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.container {
+    @include gridWrapper(12);
+
+    flex: 1;
+    background-color: $background-color-default;
+    padding-bottom: $spacing-large;
+
+    @include desktop {
+        padding-left: $spacing-large;
+        padding-right: $spacing-large;
+    }
+}
+
+.content {
+    @include gridContent(2, 12);
+}
+
+.card {
+    background-color: white;
+    border-radius: 4px;
+}
+
+.cardContent {
+    @include gridWrapper(10);
+}
+
+.pictureContainer {
+    @include gridContent(1, 11);
+    padding: $spacing-medium;
+    margin: auto;
+
+    @include desktop {
+        @include gridContent(1, 8);
+        width: 100%;
+        max-width: 680px;
+        padding: $spacing-large 0 0 $spacing-large;
+    }
+}
+
+.picture {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    border-radius: 4px;
+
+    @include desktop {
+        max-width: 680px;
+        max-height: 680px;
+    }
+}
+
+.productInfoContainer {
+    @include gridContent(1, 11);
+    padding: $spacing-medium;
+
+    @include desktop {
+        @include gridContent(8, 11);
+        padding: $spacing-large $spacing-large 0 0;
+    }
+}
+
+.condition {
+    font-size: 14px;
+    color: $text-color-dark;
+}
+
+.title {
+    font-size: 24px;
+    color: $text-color-dark;
+    font-weight: bold;
+    margin-top: $spacing-medium;
+}
+
+.price {
+    font-size: 46px;
+    color: $text-color-dark;
+    margin-top: $spacing-large;
+}
+
+.button {
+    background-color: $button-color-default;
+    color: white;
+    font-size: 18px;
+    width: 100%;
+    padding: $spacing-medium;
+    margin-top: $spacing-large;
+    border-radius: 4px;
+
+    &:hover {
+        opacity: 0.9;
+        cursor: pointer;
+    }
+}
+
+.descriptionContainer {
+    @include gridContent(1, 11);
+    padding: $spacing-large;
+
+    @include desktop {
+        @include gridContent(1, 7);
+    }
+}
+
+.descriptionHeader {
+    font-size: 28px;
+    color: $text-color-dark;
+}
+
+.description {
+    font-size: 16px;
+    color: $text-color-default;
+    margin-top: $spacing-large;
+    overflow: hidden;
+    overflow-wrap: break-word;
+    white-space: break-spaces;
+}

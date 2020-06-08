@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBar should render component 1`] = `
+<SearchBar
+  search="iPhone"
+>
+  <div
+    className="container"
+    data-test="search-bar"
+  >
+    <a
+      className="logoContainer"
+      onClick={[Function]}
+    >
+      <img
+        alt="Logo"
+        className="logo"
+        data-test="logo"
+        src="http://localhost:3000/Logo_ML@2x.png.png"
+      />
+    </a>
+    <form
+      className="bar"
+      onSubmit={[Function]}
+    >
+      <input
+        className="searchBox"
+        data-test="search-box"
+        onChange={[Function]}
+        placeholder="Nunca dejes de buscar"
+        type="text"
+        value="iPhone"
+      />
+      <a
+        className="searchIconContainer"
+        data-test="search-icon"
+        onClick={[Function]}
+      >
+        <img
+          alt="Logo"
+          className="searchIcon"
+          src="http://localhost:3000/ic_Search@2x.png.png"
+        />
+      </a>
+    </form>
+  </div>
+</SearchBar>
+`;

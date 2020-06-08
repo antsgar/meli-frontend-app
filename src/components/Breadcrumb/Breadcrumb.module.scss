@@ -1,0 +1,27 @@
+@import "../../styles/vars";
+
+.container {
+    min-height: 16px;
+    margin-top: $spacing-medium;
+    margin-bottom: $spacing-medium;
+}
+
+.item {
+    font-size: 16px;
+    color: $text-color-light;
+
+    &:not(:last-child)::after {
+        content: ">";
+        margin-left: $spacing-small;
+        margin-right: $spacing-small;
+    }
+
+    &:last-child {
+        font-weight: bold;
+    }
+
+    &:hover {
+        opacity: 0.8;
+        cursor: pointer;
+    }
+}

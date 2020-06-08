@@ -1,30 +1,77 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Test Práctico Front-end - MercadoLibre
 
-## Getting Started
+Aplicación desarrollada respondiendo al test para postulantes a front-end engineers para MercadoLibre.
 
-First, run the development server:
+Se compone de tres páginas:
 
-```bash
++ Búsqueda de productos
++ Visualización de resultados
++ Detalle de un producto
+
+## Demo
+
+https://antsgar-meli-frontend-app.herokuapp.com/
+
+## Comandos
+
++ Correr el proyecto
+
+```
+# Clonar repositorio
+git clone
+
+# Ir a carpeta del proyecto
+cd meli-frontend-test
+
+# Instalar dependencias
+npm install
+
+# Correr en modo desarrollo
 npm run dev
-# or
-yarn dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
++ Poner en producción
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```
+# Generar build
+npm run build
 
-## Learn More
+# Correr en modo producción
+npm run start
+```
 
-To learn more about Next.js, take a look at the following resources:
++ Correr tests unitarios (Jest)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run test
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
++ Correr tests e2e (Cypress)
 
-## Deploy on Vercel
+```
+# Correr aplicación
+npm run dev
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/import?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+# Correr tests e2e
+npm run e2e
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Stack utilizado
+
+Front-end:
+
++ Next.js
++ React.js
++ SCSS
+
+Back-end:
+
++ Node.js (v12.16.3)
++ Express.js
+
+Tests:
+
++ Jest
++ Enzyme
++ Cypress

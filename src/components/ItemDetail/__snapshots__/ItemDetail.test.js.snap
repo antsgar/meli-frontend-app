@@ -1,0 +1,128 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ItemDetail should render component 1`] = `
+<ItemDetail
+  categories={
+    Array [
+      "Celulares y Teléfonos",
+      "Celulares y Smartphones",
+    ]
+  }
+  item={
+    Object {
+      "condition": "new",
+      "description": "Sample description",
+      "free_shipping": true,
+      "id": "MLA860381954",
+      "picture": "http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-O.jpg",
+      "price": Object {
+        "amount": 166799,
+        "currency": "ARS",
+        "decimals": null,
+      },
+      "quantity": 4,
+      "title": "iPhone 11 64 Gb Negro 4 Gb Ram",
+    }
+  }
+>
+  <div
+    className="container"
+    data-test="item-detail"
+  >
+    <div
+      className="content"
+    >
+      <SpinnerSupport>
+        <div
+          className="container"
+        >
+          <Breadcrumb
+            breadcrumbItems={
+              Array [
+                "Celulares y Teléfonos",
+                "Celulares y Smartphones",
+              ]
+            }
+          >
+            <div
+              className="container"
+            >
+              <span
+                className="item"
+                key="Celulares y Teléfonos"
+              >
+                Celulares y Teléfonos
+              </span>
+              <span
+                className="item"
+                key="Celulares y Smartphones"
+              >
+                Celulares y Smartphones
+              </span>
+            </div>
+          </Breadcrumb>
+          <div
+            className="card"
+          >
+            <div
+              className="cardContent"
+            >
+              <div
+                className="pictureContainer"
+              >
+                <img
+                  alt="Product picture"
+                  className="picture"
+                  src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-O.jpg"
+                />
+              </div>
+              <div
+                className="productInfoContainer"
+              >
+                <div
+                  className="condition"
+                >
+                  Nuevo
+                   - 
+                  4
+                   vendidos
+                </div>
+                <div
+                  className="title"
+                >
+                  iPhone 11 64 Gb Negro 4 Gb Ram
+                </div>
+                <div
+                  className="price"
+                >
+                  ARS 166,799
+                </div>
+                <button
+                  className="button"
+                  type="button"
+                >
+                  Comprar
+                </button>
+              </div>
+              <div
+                className="descriptionContainer"
+              >
+                <div
+                  className="descriptionHeader"
+                >
+                  Descripción
+                </div>
+                <div
+                  className="description"
+                >
+                  Sample description
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </SpinnerSupport>
+    </div>
+  </div>
+</ItemDetail>
+`;

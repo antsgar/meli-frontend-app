@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Result should render component 1`] = `
+<Result
+  result={
+    Object {
+      "condition": "new",
+      "free_shipping": true,
+      "id": "MLA860381954",
+      "picture": "http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg",
+      "price": Object {
+        "amount": 166799,
+        "currency": "ARS",
+        "decimals": null,
+      },
+      "state_name": "Capital Federal",
+      "title": "iPhone 11 64 Gb Negro 4 Gb Ram",
+    }
+  }
+>
+  <div
+    className="hoverable"
+    data-id="MLA860381954"
+    data-test="result-item"
+    onClick={[Function]}
+  >
+    <div
+      className="container"
+    >
+      <div
+        className="content"
+      >
+        <img
+          alt="Product picture"
+          className="picture"
+          src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg"
+        />
+        <div
+          className="productInfoContainer"
+        >
+          <div
+            className="priceAndStateContainer"
+          >
+            <div
+              className="priceAndShipping"
+            >
+              ARS 166,799
+              <img
+                alt="Free shipping icon"
+                className="freeShippingIcon"
+                src="./ic_shipping@2x.png.png"
+              />
+            </div>
+            <div
+              className="stateName"
+            >
+              Capital Federal
+            </div>
+          </div>
+          <div
+            className="title"
+          >
+            iPhone 11 64 Gb Negro 4 Gb Ram
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</Result>
+`;

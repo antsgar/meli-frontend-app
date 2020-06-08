@@ -1,0 +1,28 @@
+@import "./mixins";
+@import "./vars";
+
+html,
+body,
+div#__next,
+div#__next > div,
+main {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    border: 0;
+}
+
+:focus {
+    outline: none;
+}

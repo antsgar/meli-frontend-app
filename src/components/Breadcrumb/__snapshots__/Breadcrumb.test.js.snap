@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Breadcrumb should render component 1`] = `
+<Breadcrumb
+  breadcrumbItems={
+    Array [
+      "Celulares y Teléfonos",
+      "Celulares y Smartphones",
+    ]
+  }
+>
+  <div
+    className="container"
+  >
+    <span
+      className="item"
+      key="Celulares y Teléfonos"
+    >
+      Celulares y Teléfonos
+    </span>
+    <span
+      className="item"
+      key="Celulares y Smartphones"
+    >
+      Celulares y Smartphones
+    </span>
+  </div>
+</Breadcrumb>
+`;

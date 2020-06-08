@@ -1,0 +1,20 @@
+@import "../../styles/mixins";
+@import "../../styles/vars";
+
+.container {
+    @include gridWrapper(12);
+
+    background-color: $background-color-default;
+    padding-bottom: $spacing-large;
+    flex: 1;
+
+    @include desktop {
+        padding-left: $spacing-large;
+        padding-right: $spacing-large;
+    }
+}
+
+.content {
+    @include gridContent(2, 12);
+    margin-bottom: $spacing-large;
+}
