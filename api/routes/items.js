@@ -7,8 +7,10 @@ const { getItems, getItem, getCategoriesFromFilters, getCategories } = require("
 const itemRoutes = express.Router();
 
 itemRoutes.get("/", async (req, res) => {
+    const { q: search = "" } = req.query;
+
     try {
-        const response = await axios.get(`${MLA_URL}/search?q=${req.query.q}`);
+        const response = await axios.get(`${MLA_URL}/search?q=${search}`);
         const { data } = response;
         const { results, filters } = data;
 
@@ -20,7 +22,6 @@ itemRoutes.get("/", async (req, res) => {
             items: getItems(results.slice(0, ITEM_LIMIT)),
             categories: getCategoriesFromFilters(filters),
         });
-        return;
     } catch (e) {
         if (e.response) {
             res.status(e.response.status).json({

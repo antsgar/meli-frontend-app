@@ -12,7 +12,7 @@ const Items = ({ search, categories, items, error, errorMessage }) => {
 };
 
 export async function getServerSideProps(context) {
-    const { search } = context.query;
+    const { search = "" } = context.query;
 
     try {
         const response = await axios.get(`${BASE_URL}/api/items?q=${search}`);
