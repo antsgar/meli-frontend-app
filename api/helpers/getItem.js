@@ -20,7 +20,8 @@ const getItem = ({
             amount: price,
             decimals: getPriceDecimals(price),
         },
-        picture: pictures ? pictures[0].url : thumbnail,
+        // Get picture if available, if not parse thumbnail url to get higher quality picture
+        picture: pictures ? pictures[0].url : thumbnail.replace("-I", "-O"),
         condition,
         free_shipping: shipping.free_shipping,
     };
