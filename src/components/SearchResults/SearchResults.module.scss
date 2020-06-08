@@ -17,4 +17,5 @@
 .content {
     @include gridContent(2, 12);
     margin-bottom: $spacing-large;
+    padding-bottom: $spacing-large;
 }
