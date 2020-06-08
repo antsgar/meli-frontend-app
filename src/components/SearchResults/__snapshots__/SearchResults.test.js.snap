@@ -75,93 +75,35 @@ exports[`SearchResults should render component 1`] = `
         <div
           className="container"
         >
-          <Breadcrumb
-            breadcrumbItems={
-              Array [
-                "Celulares y Teléfonos",
-                "Celulares y Smartphones",
-              ]
-            }
-          >
-            <div
-              className="container"
+          <div>
+            <Breadcrumb
+              breadcrumbItems={
+                Array [
+                  "Celulares y Teléfonos",
+                  "Celulares y Smartphones",
+                ]
+              }
             >
-              <span
-                className="item"
-                key="Celulares y Teléfonos"
+              <div
+                className="container"
               >
-                Celulares y Teléfonos
-              </span>
-              <span
-                className="item"
-                key="Celulares y Smartphones"
-              >
-                Celulares y Smartphones
-              </span>
-            </div>
-          </Breadcrumb>
-          <ResultsCard
-            results={
-              Array [
-                Object {
-                  "condition": "new",
-                  "free_shipping": true,
-                  "id": "MLA860381954",
-                  "picture": "http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg",
-                  "price": Object {
-                    "amount": 166799,
-                    "currency": "ARS",
-                    "decimals": null,
-                  },
-                  "state_name": "Capital Federal",
-                  "title": "iPhone 11 64 Gb Negro 4 Gb Ram",
-                },
-                Object {
-                  "condition": "new",
-                  "free_shipping": true,
-                  "id": "MLA859045066",
-                  "picture": "http://mla-s1-p.mlstatic.com/639283-MLA32646972173_102019-I.jpg",
-                  "price": Object {
-                    "amount": 288900,
-                    "currency": "ARS",
-                    "decimals": null,
-                  },
-                  "state_name": "Capital Federal",
-                  "title": "iPhone 11 Pro Max 256 Gb Gris Espacial 4 Gb Ram",
-                },
-                Object {
-                  "condition": "new",
-                  "free_shipping": true,
-                  "id": "MLA846526085",
-                  "picture": "http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg",
-                  "price": Object {
-                    "amount": 149989.99,
-                    "currency": "ARS",
-                    "decimals": 99,
-                  },
-                  "state_name": "Capital Federal",
-                  "title": "iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram",
-                },
-                Object {
-                  "condition": "new",
-                  "free_shipping": true,
-                  "id": "MLA860817466",
-                  "picture": "http://mla-s1-p.mlstatic.com/633990-MLA31002678135_062019-I.jpg",
-                  "price": Object {
-                    "amount": 158000,
-                    "currency": "ARS",
-                    "decimals": null,
-                  },
-                  "state_name": "Capital Federal",
-                  "title": "iPhone XR 64 Gb Negro 3 Gb Ram",
-                },
-              ]
-            }
-          >
-            <div>
-              <Result
-                key="MLA860381954"
-                result={
+                <span
+                  className="item"
+                  key="Celulares y Teléfonos"
+                >
+                  Celulares y Teléfonos
+                </span>
+                <span
+                  className="item"
+                  key="Celulares y Smartphones"
+                >
+                  Celulares y Smartphones
+                </span>
+              </div>
+            </Breadcrumb>
+            <ResultsCard
+              results={
+                Array [
                   Object {
                     "condition": "new",
                     "free_shipping": true,
@@ -174,61 +116,7 @@ exports[`SearchResults should render component 1`] = `
                     },
                     "state_name": "Capital Federal",
                     "title": "iPhone 11 64 Gb Negro 4 Gb Ram",
-                  }
-                }
-              >
-                <div
-                  className="hoverable"
-                  data-id="MLA860381954"
-                  data-test="result-item"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="container"
-                  >
-                    <div
-                      className="content"
-                    >
-                      <img
-                        alt="Product picture"
-                        className="picture"
-                        src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg"
-                      />
-                      <div
-                        className="productInfoContainer"
-                      >
-                        <div
-                          className="priceAndStateContainer"
-                        >
-                          <div
-                            className="priceAndShipping"
-                          >
-                            ARS 166,799
-                            <img
-                              alt="Free shipping icon"
-                              className="freeShippingIcon"
-                              src="/ic_shipping@2x.png.png"
-                            />
-                          </div>
-                          <div
-                            className="stateName"
-                          >
-                            Capital Federal
-                          </div>
-                        </div>
-                        <div
-                          className="title"
-                        >
-                          iPhone 11 64 Gb Negro 4 Gb Ram
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Result>
-              <Result
-                key="MLA859045066"
-                result={
+                  },
                   Object {
                     "condition": "new",
                     "free_shipping": true,
@@ -241,61 +129,7 @@ exports[`SearchResults should render component 1`] = `
                     },
                     "state_name": "Capital Federal",
                     "title": "iPhone 11 Pro Max 256 Gb Gris Espacial 4 Gb Ram",
-                  }
-                }
-              >
-                <div
-                  className="hoverable"
-                  data-id="MLA859045066"
-                  data-test="result-item"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="container"
-                  >
-                    <div
-                      className="content"
-                    >
-                      <img
-                        alt="Product picture"
-                        className="picture"
-                        src="http://mla-s1-p.mlstatic.com/639283-MLA32646972173_102019-I.jpg"
-                      />
-                      <div
-                        className="productInfoContainer"
-                      >
-                        <div
-                          className="priceAndStateContainer"
-                        >
-                          <div
-                            className="priceAndShipping"
-                          >
-                            ARS 288,900
-                            <img
-                              alt="Free shipping icon"
-                              className="freeShippingIcon"
-                              src="/ic_shipping@2x.png.png"
-                            />
-                          </div>
-                          <div
-                            className="stateName"
-                          >
-                            Capital Federal
-                          </div>
-                        </div>
-                        <div
-                          className="title"
-                        >
-                          iPhone 11 Pro Max 256 Gb Gris Espacial 4 Gb Ram
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Result>
-              <Result
-                key="MLA846526085"
-                result={
+                  },
                   Object {
                     "condition": "new",
                     "free_shipping": true,
@@ -308,61 +142,7 @@ exports[`SearchResults should render component 1`] = `
                     },
                     "state_name": "Capital Federal",
                     "title": "iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram",
-                  }
-                }
-              >
-                <div
-                  className="hoverable"
-                  data-id="MLA846526085"
-                  data-test="result-item"
-                  onClick={[Function]}
-                >
-                  <div
-                    className="container"
-                  >
-                    <div
-                      className="content"
-                    >
-                      <img
-                        alt="Product picture"
-                        className="picture"
-                        src="http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg"
-                      />
-                      <div
-                        className="productInfoContainer"
-                      >
-                        <div
-                          className="priceAndStateContainer"
-                        >
-                          <div
-                            className="priceAndShipping"
-                          >
-                            ARS 149,990
-                            <img
-                              alt="Free shipping icon"
-                              className="freeShippingIcon"
-                              src="/ic_shipping@2x.png.png"
-                            />
-                          </div>
-                          <div
-                            className="stateName"
-                          >
-                            Capital Federal
-                          </div>
-                        </div>
-                        <div
-                          className="title"
-                        >
-                          iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </Result>
-              <Result
-                key="MLA860817466"
-                result={
+                  },
                   Object {
                     "condition": "new",
                     "free_shipping": true,
@@ -375,60 +155,282 @@ exports[`SearchResults should render component 1`] = `
                     },
                     "state_name": "Capital Federal",
                     "title": "iPhone XR 64 Gb Negro 3 Gb Ram",
+                  },
+                ]
+              }
+            >
+              <div>
+                <Result
+                  key="MLA860381954"
+                  result={
+                    Object {
+                      "condition": "new",
+                      "free_shipping": true,
+                      "id": "MLA860381954",
+                      "picture": "http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg",
+                      "price": Object {
+                        "amount": 166799,
+                        "currency": "ARS",
+                        "decimals": null,
+                      },
+                      "state_name": "Capital Federal",
+                      "title": "iPhone 11 64 Gb Negro 4 Gb Ram",
+                    }
                   }
-                }
-              >
-                <div
-                  className="hoverable"
-                  data-id="MLA860817466"
-                  data-test="result-item"
-                  onClick={[Function]}
                 >
                   <div
-                    className="container"
+                    className="hoverable"
+                    data-id="MLA860381954"
+                    data-test="result-item"
+                    onClick={[Function]}
                   >
                     <div
-                      className="content"
+                      className="container"
                     >
-                      <img
-                        alt="Product picture"
-                        className="picture"
-                        src="http://mla-s1-p.mlstatic.com/633990-MLA31002678135_062019-I.jpg"
-                      />
                       <div
-                        className="productInfoContainer"
+                        className="content"
                       >
+                        <img
+                          alt="Product picture"
+                          className="picture"
+                          src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg"
+                        />
                         <div
-                          className="priceAndStateContainer"
+                          className="productInfoContainer"
                         >
                           <div
-                            className="priceAndShipping"
+                            className="priceAndStateContainer"
                           >
-                            ARS 158,000
-                            <img
-                              alt="Free shipping icon"
-                              className="freeShippingIcon"
-                              src="/ic_shipping@2x.png.png"
-                            />
+                            <div
+                              className="priceAndShipping"
+                            >
+                              ARS 166,799
+                              <img
+                                alt="Free shipping icon"
+                                className="freeShippingIcon"
+                                src="/ic_shipping@2x.png.png"
+                              />
+                            </div>
+                            <div
+                              className="stateName"
+                            >
+                              Capital Federal
+                            </div>
                           </div>
                           <div
-                            className="stateName"
+                            className="title"
                           >
-                            Capital Federal
+                            iPhone 11 64 Gb Negro 4 Gb Ram
                           </div>
-                        </div>
-                        <div
-                          className="title"
-                        >
-                          iPhone XR 64 Gb Negro 3 Gb Ram
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              </Result>
-            </div>
-          </ResultsCard>
+                </Result>
+                <Result
+                  key="MLA859045066"
+                  result={
+                    Object {
+                      "condition": "new",
+                      "free_shipping": true,
+                      "id": "MLA859045066",
+                      "picture": "http://mla-s1-p.mlstatic.com/639283-MLA32646972173_102019-I.jpg",
+                      "price": Object {
+                        "amount": 288900,
+                        "currency": "ARS",
+                        "decimals": null,
+                      },
+                      "state_name": "Capital Federal",
+                      "title": "iPhone 11 Pro Max 256 Gb Gris Espacial 4 Gb Ram",
+                    }
+                  }
+                >
+                  <div
+                    className="hoverable"
+                    data-id="MLA859045066"
+                    data-test="result-item"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <div
+                        className="content"
+                      >
+                        <img
+                          alt="Product picture"
+                          className="picture"
+                          src="http://mla-s1-p.mlstatic.com/639283-MLA32646972173_102019-I.jpg"
+                        />
+                        <div
+                          className="productInfoContainer"
+                        >
+                          <div
+                            className="priceAndStateContainer"
+                          >
+                            <div
+                              className="priceAndShipping"
+                            >
+                              ARS 288,900
+                              <img
+                                alt="Free shipping icon"
+                                className="freeShippingIcon"
+                                src="/ic_shipping@2x.png.png"
+                              />
+                            </div>
+                            <div
+                              className="stateName"
+                            >
+                              Capital Federal
+                            </div>
+                          </div>
+                          <div
+                            className="title"
+                          >
+                            iPhone 11 Pro Max 256 Gb Gris Espacial 4 Gb Ram
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Result>
+                <Result
+                  key="MLA846526085"
+                  result={
+                    Object {
+                      "condition": "new",
+                      "free_shipping": true,
+                      "id": "MLA846526085",
+                      "picture": "http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg",
+                      "price": Object {
+                        "amount": 149989.99,
+                        "currency": "ARS",
+                        "decimals": 99,
+                      },
+                      "state_name": "Capital Federal",
+                      "title": "iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram",
+                    }
+                  }
+                >
+                  <div
+                    className="hoverable"
+                    data-id="MLA846526085"
+                    data-test="result-item"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <div
+                        className="content"
+                      >
+                        <img
+                          alt="Product picture"
+                          className="picture"
+                          src="http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg"
+                        />
+                        <div
+                          className="productInfoContainer"
+                        >
+                          <div
+                            className="priceAndStateContainer"
+                          >
+                            <div
+                              className="priceAndShipping"
+                            >
+                              ARS 149,990
+                              <img
+                                alt="Free shipping icon"
+                                className="freeShippingIcon"
+                                src="/ic_shipping@2x.png.png"
+                              />
+                            </div>
+                            <div
+                              className="stateName"
+                            >
+                              Capital Federal
+                            </div>
+                          </div>
+                          <div
+                            className="title"
+                          >
+                            iPhone 8 Plus 64 Gb Gris Espacial 3 Gb Ram
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Result>
+                <Result
+                  key="MLA860817466"
+                  result={
+                    Object {
+                      "condition": "new",
+                      "free_shipping": true,
+                      "id": "MLA860817466",
+                      "picture": "http://mla-s1-p.mlstatic.com/633990-MLA31002678135_062019-I.jpg",
+                      "price": Object {
+                        "amount": 158000,
+                        "currency": "ARS",
+                        "decimals": null,
+                      },
+                      "state_name": "Capital Federal",
+                      "title": "iPhone XR 64 Gb Negro 3 Gb Ram",
+                    }
+                  }
+                >
+                  <div
+                    className="hoverable"
+                    data-id="MLA860817466"
+                    data-test="result-item"
+                    onClick={[Function]}
+                  >
+                    <div
+                      className="container"
+                    >
+                      <div
+                        className="content"
+                      >
+                        <img
+                          alt="Product picture"
+                          className="picture"
+                          src="http://mla-s1-p.mlstatic.com/633990-MLA31002678135_062019-I.jpg"
+                        />
+                        <div
+                          className="productInfoContainer"
+                        >
+                          <div
+                            className="priceAndStateContainer"
+                          >
+                            <div
+                              className="priceAndShipping"
+                            >
+                              ARS 158,000
+                              <img
+                                alt="Free shipping icon"
+                                className="freeShippingIcon"
+                                src="/ic_shipping@2x.png.png"
+                              />
+                            </div>
+                            <div
+                              className="stateName"
+                            >
+                              Capital Federal
+                            </div>
+                          </div>
+                          <div
+                            className="title"
+                          >
+                            iPhone XR 64 Gb Negro 3 Gb Ram
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </Result>
+              </div>
+            </ResultsCard>
+          </div>
         </div>
       </SpinnerSupport>
     </div>

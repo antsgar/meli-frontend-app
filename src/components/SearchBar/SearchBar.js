@@ -19,12 +19,7 @@ const SearchBar = ({ search }) => {
     return (
         <div className={styles.container} data-test="search-bar">
             <a className={styles.logoContainer} onClick={goToMainPage}>
-                <img
-                    className={styles.logo}
-                    data-test="logo"
-                    src={"/Logo_ML@2x.png.png"}
-                    alt="Logo"
-                ></img>
+                <img className={styles.logo} data-test="logo" src={"/Logo_ML@2x.png.png"} alt="Logo"></img>
             </a>
             <form className={styles.bar} onSubmit={submitSearchQuery}>
                 <input
@@ -35,16 +30,8 @@ const SearchBar = ({ search }) => {
                     value={searchQuery}
                     onChange={(e) => setSearchQuery(e.target.value)}
                 ></input>
-                <a
-                    className={styles.searchIconContainer}
-                    data-test="search-icon"
-                    onClick={submitSearchQuery}
-                >
-                    <img
-                        className={styles.searchIcon}
-                        src={"/ic_Search@2x.png.png"}
-                        alt="Logo"
-                    ></img>
+                <a className={styles.searchIconContainer} data-test="search-icon" onClick={submitSearchQuery}>
+                    <img className={styles.searchIcon} src={"/ic_Search@2x.png.png"} alt="Logo"></img>
                 </a>
             </form>
         </div>

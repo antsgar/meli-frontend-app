@@ -1,19 +1,8 @@
 const express = require("express");
 const axios = require("axios");
 
-const {
-    ML_URL,
-    MLA_URL,
-    AUTHOR_FIRST_NAME,
-    AUTHOR_LAST_NAME,
-    ITEM_LIMIT,
-} = require("../constants");
-const {
-    getItems,
-    getItem,
-    getCategoriesFromFilters,
-    getCategories,
-} = require("../helpers");
+const { ML_URL, MLA_URL, AUTHOR_FIRST_NAME, AUTHOR_LAST_NAME, ITEM_LIMIT } = require("../constants");
+const { getItems, getItem, getCategoriesFromFilters, getCategories } = require("../helpers");
 
 const itemRoutes = express.Router();
 
@@ -55,9 +44,7 @@ itemRoutes.get("/:id", async (req, res) => {
         let description = "";
 
         if (itemResponse.status === 200) {
-            const itemDescriptionResponse = await axios.get(
-                `${ML_URL}/items/${id}/description`
-            );
+            const itemDescriptionResponse = await axios.get(`${ML_URL}/items/${id}/description`);
             const { data: itemDescriptionData } = itemDescriptionResponse;
 
             if (itemDescriptionResponse.status === 200) {
@@ -70,11 +57,9 @@ itemRoutes.get("/:id", async (req, res) => {
                 description,
             };
 
-            // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados, 
+            // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados,
             // y deben estar disponibles en caso de acceder a la página navegando directamente a la URL
-            const categoryResponse = await axios.get(
-                `${ML_URL}/categories/${itemData.category_id}`
-            );
+            const categoryResponse = await axios.get(`${ML_URL}/categories/${itemData.category_id}`);
             const { data: categoryData } = categoryResponse;
 
             if (categoryResponse.status === 200) {

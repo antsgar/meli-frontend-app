@@ -19,7 +19,7 @@ const SpinnerSupport = ({ children }) => {
         Router.events.on("routeChangeComplete", setLoadingFalse);
         Router.events.on("routeChangeError", setLoadingFalse);
 
-        return () => {
+        return function cleanup() {
             Router.events.off("routeChangeStart", setLoadingTrue);
             Router.events.off("routeChangeComplete", setLoadingFalse);
             Router.events.off("routeChangeEnd", setLoadingTrue);

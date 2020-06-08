@@ -1,13 +1,19 @@
-import { Breadcrumb, ResultsCard, SpinnerSupport } from "..";
+import { Breadcrumb, ResultsCard, SpinnerSupport, ErrorMessage } from "..";
 import styles from "./SearchResults.module.scss";
 
-const SearchResults = ({ categories, items }) => {
+const SearchResults = ({ error, errorMessage, categories, items }) => {
     return (
         <div className={styles.container}>
             <div className={styles.content}>
                 <SpinnerSupport>
-                    <Breadcrumb breadcrumbItems={categories} />
-                    <ResultsCard results={items} />
+                    {error ? (
+                        <ErrorMessage message={errorMessage} />
+                    ) : (
+                        <div>
+                            <Breadcrumb breadcrumbItems={categories} />
+                            <ResultsCard results={items} />
+                        </div>
+                    )}
                 </SpinnerSupport>
             </div>
         </div>

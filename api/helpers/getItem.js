@@ -6,19 +6,10 @@ const getPicture = (thumbnail, pictures) => {
     // Obtener primera imagen si está disponible, sino usar thumbnail
     // Parsear la url para obtener imagen de mejor calidad y a través de https
     const picture = pictures ? pictures[0].url : thumbnail;
-    return picture.replace("-I", "-O").replace("http", "https")
-}
+    return picture.replace("-I", "-O").replace("http", "https");
+};
 
-const getItem = ({
-    id,
-    title,
-    price,
-    currency_id,
-    thumbnail,
-    pictures,
-    condition,
-    shipping,
-}) => {
+const getItem = ({ id, title, price, currency_id, thumbnail, pictures, condition, shipping }) => {
     return {
         id,
         title,

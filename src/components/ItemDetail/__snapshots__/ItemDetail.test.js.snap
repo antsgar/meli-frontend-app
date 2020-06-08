@@ -36,86 +36,88 @@ exports[`ItemDetail should render component 1`] = `
         <div
           className="container"
         >
-          <Breadcrumb
-            breadcrumbItems={
-              Array [
-                "Celulares y Teléfonos",
-                "Celulares y Smartphones",
-              ]
-            }
-          >
-            <div
-              className="container"
-            >
-              <span
-                className="item"
-                key="Celulares y Teléfonos"
-              >
-                Celulares y Teléfonos
-              </span>
-              <span
-                className="item"
-                key="Celulares y Smartphones"
-              >
-                Celulares y Smartphones
-              </span>
-            </div>
-          </Breadcrumb>
-          <div
-            className="card"
-          >
-            <div
-              className="cardContent"
+          <div>
+            <Breadcrumb
+              breadcrumbItems={
+                Array [
+                  "Celulares y Teléfonos",
+                  "Celulares y Smartphones",
+                ]
+              }
             >
               <div
-                className="pictureContainer"
+                className="container"
               >
-                <img
-                  alt="Product picture"
-                  className="picture"
-                  src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-O.jpg"
-                />
+                <span
+                  className="item"
+                  key="Celulares y Teléfonos"
+                >
+                  Celulares y Teléfonos
+                </span>
+                <span
+                  className="item"
+                  key="Celulares y Smartphones"
+                >
+                  Celulares y Smartphones
+                </span>
               </div>
+            </Breadcrumb>
+            <div
+              className="card"
+            >
               <div
-                className="productInfoContainer"
+                className="cardContent"
               >
                 <div
-                  className="condition"
+                  className="pictureContainer"
                 >
-                  Nuevo
-                   - 
-                  4
-                   vendidos
+                  <img
+                    alt="Product picture"
+                    className="picture"
+                    src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-O.jpg"
+                  />
                 </div>
                 <div
-                  className="title"
+                  className="productInfoContainer"
                 >
-                  iPhone 11 64 Gb Negro 4 Gb Ram
+                  <div
+                    className="condition"
+                  >
+                    Nuevo
+                     - 
+                    4
+                     vendidos
+                  </div>
+                  <div
+                    className="title"
+                  >
+                    iPhone 11 64 Gb Negro 4 Gb Ram
+                  </div>
+                  <div
+                    className="price"
+                  >
+                    ARS 166,799
+                  </div>
+                  <button
+                    className="button"
+                    type="button"
+                  >
+                    Comprar
+                  </button>
                 </div>
                 <div
-                  className="price"
+                  className="descriptionContainer"
                 >
-                  ARS 166,799
-                </div>
-                <button
-                  className="button"
-                  type="button"
-                >
-                  Comprar
-                </button>
-              </div>
-              <div
-                className="descriptionContainer"
-              >
-                <div
-                  className="descriptionHeader"
-                >
-                  Descripción
-                </div>
-                <div
-                  className="description"
-                >
-                  Sample description
+                  <div
+                    className="descriptionHeader"
+                  >
+                    Descripción
+                  </div>
+                  <div
+                    className="description"
+                  >
+                    Sample description
+                  </div>
                 </div>
               </div>
             </div>

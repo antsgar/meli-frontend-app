@@ -1,16 +1,12 @@
 import axios from "axios";
-import { Layout, SearchBar, ItemDetail, ErrorMessage } from "../../components";
+import { Layout, SearchBar, ItemDetail } from "../../components";
 import { BASE_URL } from "../../constants";
 
 const Item = ({ error, categories, item }) => {
     return (
         <Layout description={`Mercado Libre Argentina - ${item.title}`}>
             <SearchBar search="" />
-            {error ? (
-                <ErrorMessage message="Ha ocurrido un error al buscar este producto. Por favor, inténtelo nuevamente en unos minutos." />
-            ) : (
-                <ItemDetail categories={categories} item={item} />
-            )}
+            <ItemDetail categories={categories} item={item} error={error} />
         </Layout>
     );
 };
@@ -34,9 +30,9 @@ export async function getServerSideProps(context) {
 
     return {
         props: {
-            error: true
-        }
-    }
+            error: true,
+        },
+    };
 }
 
 export default Item;
