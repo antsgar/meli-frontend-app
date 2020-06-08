@@ -3,7 +3,8 @@ const getPriceDecimals = (price) => {
 };
 
 const getPicture = (thumbnail, pictures) => {
-    // Get picture if available, if not thumbnail. Parse url to get picture of higher quality and through https
+    // Obtener primera imagen si está disponible, sino usar thumbnail
+    // Parsear la url para obtener imagen de mejor calidad y a través de https
     const picture = pictures ? pictures[0].url : thumbnail;
     return picture.replace("-I", "-O").replace("http", "https")
 }

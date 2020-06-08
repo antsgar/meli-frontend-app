@@ -70,6 +70,8 @@ itemRoutes.get("/:id", async (req, res) => {
                 description,
             };
 
+            // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados, 
+            // y deben estar disponibles en caso de acceder a la página navegando directamente a la URL
             const categoryResponse = await axios.get(
                 `${ML_URL}/categories/${itemData.category_id}`
             );
