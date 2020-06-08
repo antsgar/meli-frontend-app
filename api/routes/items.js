@@ -42,11 +42,15 @@ itemRoutes.get("/:id", async (req, res) => {
         const itemResponse = await axios.get(`${ML_URL}/items/${id}`);
         const { data: itemData } = itemResponse;
         let categories = [];
-        let description = "";
+        let description = null;
 
-        const itemDescriptionResponse = await axios.get(`${ML_URL}/items/${id}/description`);
-        const { data: itemDescriptionData } = itemDescriptionResponse;
-        description = itemDescriptionData.plain_text;
+        // validateStatus = false, no arrojar error si falla la llamada a description, igualmente podemos mostrar el item
+        const itemDescriptionResponse = await axios.get(`${ML_URL}/items/${id}/description`, { validateStatus: false });
+
+        if (itemDescriptionResponse.status === 200) {
+            const { data: itemDescriptionData } = itemDescriptionResponse;
+            description = itemDescriptionData.plain_text;
+        }
 
         const item = {
             ...getItem(itemData),
@@ -56,9 +60,13 @@ itemRoutes.get("/:id", async (req, res) => {
 
         // Obtener categorías dado que pueden ser distintas a las obtenidas para la lista de resultados,
         // y deben estar disponibles en caso de acceder a la página navegando directamente a la URL
-        const categoryResponse = await axios.get(`${ML_URL}/categories/${itemData.category_id}`);
-        const { data: categoryData } = categoryResponse;
-        categories = getCategories(categoryData);
+        // validateStatus = false, no arrojar error si falla la llamada a categories, igualmente podemos mostrar el item
+        const categoryResponse = await axios.get(`${ML_URL}/categories/${itemData.category_id}`, { validateStatus: false });
+
+        if (categoryResponse.status === 200) {
+            const { data: categoryData } = categoryResponse;
+            categories = getCategories(categoryData);
+        }
 
         res.status(200).json({
             author: {

@@ -38,7 +38,7 @@
         @include gridContent(1, 8);
         width: 100%;
         max-width: 680px;
-        padding: $spacing-large 0 0 $spacing-large;
+        padding: $spacing-large 0;
     }
 }
 
@@ -99,7 +99,7 @@
 
 .descriptionContainer {
     @include gridContent(1, 11);
-    padding: $spacing-large;
+    padding: 0 0 $spacing-large $spacing-large;
 
     @include desktop {
         @include gridContent(1, 7);

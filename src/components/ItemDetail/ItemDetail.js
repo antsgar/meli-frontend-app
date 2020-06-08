@@ -3,6 +3,8 @@ import { parseCondition, parsePrice } from "../../helpers";
 import styles from "./ItemDetail.module.scss";
 
 const ItemDetail = ({ categories, item, error, errorMessage }) => {
+    const defaultDescription = "El vendedor no incluyó una descripción del producto.";
+
     return (
         <div className={styles.container} data-test="item-detail">
             <div className={styles.content}>
@@ -29,7 +31,7 @@ const ItemDetail = ({ categories, item, error, errorMessage }) => {
                                     </div>
                                     <div className={styles.descriptionContainer}>
                                         <div className={styles.descriptionHeader}>Descripción</div>
-                                        <div className={styles.description}>{item.description}</div>
+                                        <div className={styles.description}>{item.description || defaultDescription}</div>
                                     </div>
                                 </div>
                             </div>
