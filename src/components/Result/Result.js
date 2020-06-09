@@ -7,6 +7,9 @@ const Result = ({ result }) => {
 
     const { id, picture, price, title, state_name: stateName, free_shipping: freeShipping } = result;
 
+    // Si no hay imagen mostrar imagen por defecto
+    const imageSrc = picture.length > 0 ? picture : "/img_not_available_thumbnail.jpg";
+
     const openItemDetail = () => {
         router.push("/items/[id]", `/items/${id}`);
     };
@@ -15,7 +18,7 @@ const Result = ({ result }) => {
         <div className={styles.hoverable} data-test="result-item" data-id={id} onClick={openItemDetail}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <img className={styles.picture} src={picture} alt="Product picture"></img>
+                    <img className={styles.picture} src={imageSrc} alt="Product picture"></img>
                     <div className={styles.productInfoContainer}>
                         <div className={styles.priceAndStateContainer}>
                             <div className={styles.priceAndShipping}>

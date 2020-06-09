@@ -5,6 +5,9 @@ import styles from "./ItemDetail.module.scss";
 const ItemDetail = ({ categories, item, error, errorMessage }) => {
     const defaultDescription = "El vendedor no incluyó una descripción del producto.";
 
+    // Si no hay imagen mostrar imagen por defecto
+    const imageSrc = item && item.picture.length > 0 ? item.picture : "/img_not_available.jpg";
+
     return (
         <div className={styles.container} data-test="item-detail">
             <div className={styles.content}>
@@ -17,7 +20,7 @@ const ItemDetail = ({ categories, item, error, errorMessage }) => {
                             <div className={styles.card}>
                                 <div className={styles.cardContent}>
                                     <div className={styles.pictureContainer}>
-                                        <img className={styles.picture} src={item.picture} alt="Product picture"></img>
+                                        <img className={styles.picture} src={imageSrc} alt="Product picture"></img>
                                     </div>
                                     <div className={styles.productInfoContainer}>
                                         <div className={styles.condition}>
