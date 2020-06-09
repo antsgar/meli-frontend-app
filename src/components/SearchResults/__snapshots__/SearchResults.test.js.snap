@@ -191,7 +191,7 @@ exports[`SearchResults should render component 1`] = `
                         className="content"
                       >
                         <img
-                          alt="Product picture"
+                          alt="Imagen del producto"
                           className="picture"
                           src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-I.jpg"
                         />
@@ -206,7 +206,7 @@ exports[`SearchResults should render component 1`] = `
                             >
                               ARS 166,799
                               <img
-                                alt="Free shipping icon"
+                                alt="Ícono de envío gratis"
                                 className="freeShippingIcon"
                                 src="/ic_shipping@2x.png.png"
                               />
@@ -258,7 +258,7 @@ exports[`SearchResults should render component 1`] = `
                         className="content"
                       >
                         <img
-                          alt="Product picture"
+                          alt="Imagen del producto"
                           className="picture"
                           src="http://mla-s1-p.mlstatic.com/639283-MLA32646972173_102019-I.jpg"
                         />
@@ -273,7 +273,7 @@ exports[`SearchResults should render component 1`] = `
                             >
                               ARS 288,900
                               <img
-                                alt="Free shipping icon"
+                                alt="Ícono de envío gratis"
                                 className="freeShippingIcon"
                                 src="/ic_shipping@2x.png.png"
                               />
@@ -325,7 +325,7 @@ exports[`SearchResults should render component 1`] = `
                         className="content"
                       >
                         <img
-                          alt="Product picture"
+                          alt="Imagen del producto"
                           className="picture"
                           src="http://mla-s2-p.mlstatic.com/662389-MLA31003000984_062019-I.jpg"
                         />
@@ -340,7 +340,7 @@ exports[`SearchResults should render component 1`] = `
                             >
                               ARS 149,990
                               <img
-                                alt="Free shipping icon"
+                                alt="Ícono de envío gratis"
                                 className="freeShippingIcon"
                                 src="/ic_shipping@2x.png.png"
                               />
@@ -392,7 +392,7 @@ exports[`SearchResults should render component 1`] = `
                         className="content"
                       >
                         <img
-                          alt="Product picture"
+                          alt="Imagen del producto"
                           className="picture"
                           src="http://mla-s1-p.mlstatic.com/633990-MLA31002678135_062019-I.jpg"
                         />
@@ -407,7 +407,7 @@ exports[`SearchResults should render component 1`] = `
                             >
                               ARS 158,000
                               <img
-                                alt="Free shipping icon"
+                                alt="Ícono de envío gratis"
                                 className="freeShippingIcon"
                                 src="/ic_shipping@2x.png.png"
                               />

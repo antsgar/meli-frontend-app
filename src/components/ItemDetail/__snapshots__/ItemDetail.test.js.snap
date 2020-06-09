@@ -72,7 +72,7 @@ exports[`ItemDetail should render component 1`] = `
                   className="pictureContainer"
                 >
                   <img
-                    alt="Product picture"
+                    alt="Imagen del producto"
                     className="picture"
                     src="http://mla-s1-p.mlstatic.com/885508-MLA32445302787_102019-O.jpg"
                   />

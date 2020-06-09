@@ -18,7 +18,7 @@ const Result = ({ result }) => {
         <div className={styles.hoverable} data-test="result-item" data-id={id} onClick={openItemDetail}>
             <div className={styles.container}>
                 <div className={styles.content}>
-                    <img className={styles.picture} src={imageSrc} alt="Product picture"></img>
+                    <img className={styles.picture} src={imageSrc} alt="Imagen del producto"></img>
                     <div className={styles.productInfoContainer}>
                         <div className={styles.priceAndStateContainer}>
                             <div className={styles.priceAndShipping}>
@@ -27,7 +27,7 @@ const Result = ({ result }) => {
                                     <img
                                         className={styles.freeShippingIcon}
                                         src="/ic_shipping@2x.png.png"
-                                        alt="Free shipping icon"
+                                        alt="Ícono de envío gratis"
                                     ></img>
                                 )}
                             </div>

@@ -20,7 +20,7 @@ const ItemDetail = ({ categories, item, error, errorMessage }) => {
                             <div className={styles.card}>
                                 <div className={styles.cardContent}>
                                     <div className={styles.pictureContainer}>
-                                        <img className={styles.picture} src={imageSrc} alt="Product picture"></img>
+                                        <img className={styles.picture} src={imageSrc} alt="Imagen del producto"></img>
                                     </div>
                                     <div className={styles.productInfoContainer}>
                                         <div className={styles.condition}>
